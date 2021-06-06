@@ -1,0 +1,56 @@
+conky.config = {
+  alignment = 'top_right',
+  background = false,
+  border_width = 0.5,
+  cpu_avg_samples = 4,
+  default_outline_color = 'grey',
+  default_shade_color = 'black',
+  draw_borders = true,
+  draw_graph_borders = true,
+  draw_outline = false,
+  draw_shades = false,
+  use_xft = true,
+  font = 'Terminus (TTF):size=9:Regular',
+  gap_x = 1162,
+  gap_y = 200,
+  imlib_cache_size = 0,
+  maximum_width = 180,
+  minimum_height = 130,
+  minimum_width = 200,
+  net_avg_samples = 2,
+  double_buffer = true,
+  out_to_console = false,
+  out_to_stderr = false,
+  extra_newline = false,
+  own_window = true,
+  own_window_colour = '000000',
+  own_window_class = 'Conky',
+  own_window_argb_visual = true,
+  own_window_argb_value = 255,
+  own_window_type = 'Conky',
+  own_window_transparent = true,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  stippled_borders = 0,
+  update_interval = 1,
+  uppercase = false,
+  use_spacer = 'none',
+  show_graph_scale = false,
+  show_graph_range = false,
+  default_color = '151515',
+  color1 = '151515',
+  color2 = 'DB1D1D',
+  color3 = 'FBD823',
+  color4 = '039A00'
+}
+
+conky.text = [[
+${font Terminus (TTF):size=15:Bold}${offset 58}NETWORK
+${voffset -30}
+${font Hack Nerd Font:size=8:Regular}${offset 48} ${font Terminus (TTF):size=9:Regular} ${addr enp4s0}
+${offset 2}
+${offset 30}${font Hack Nerd Font:size=8:Regular} ${upspeedgraph enp4s0 10,100 151515 151515 -t}
+${offset 42}${upspeedf enp4s0}KiB/s, ${totalup enp4s0}
+${voffset -4}
+${offset 30}${font Hack Nerd Font:size=8:Regular} ${downspeedgraph enp4s0 10,100 151515 151515 -t}
+${offset 42}${downspeedf enp4s0}KiB/s, ${totaldown enp4s0}
+]]
